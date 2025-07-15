@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-    _di: { type : String, required : true },
-    name: { tyep : String, required: true },
-    email: { type : String, required: true, unique: true},
+    _di: { type: String, required: true },
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true},
     imageUrl: { type: String, required:true },
-    cartImages: { type:Object, default: {}}
+    cartImages: { type: Object, default: {}}
 }, { minimize: false })
 
 const User = mongoose.models.user || mongoose.model('user', userSchema)
